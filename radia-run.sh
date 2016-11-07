@@ -14,6 +14,8 @@ shopt -u nullglob
 for venv in ~/.pyenv/versions/*; do
     (
         pyenv global "$(basename "$venv")"
+        pip install -U pykern
+        pip install -U 'git+git://github.com/radiasoft/rsbeams.git@master'
         if python -c 'import synergia' >& /dev/null; then
             pip install -U 'git+git://github.com/radiasoft/rssynergia.git@master'
         fi
