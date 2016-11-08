@@ -4,9 +4,6 @@
 #
 # Copy template files into ~/jupyter if they don't already exist
 
-# Fix up beamsim issue temporarily
-pyenv global 2.7.10
-
 shopt -s nullglob
 for src in jupyter/*; do
     dst=~/jupyter/$(basename "$src")
