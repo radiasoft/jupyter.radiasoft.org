@@ -1,6 +1,8 @@
 #!/bin/bash
 #
-# Copy files into ~/jupyter if they don't already exist
+# Setup
+#
+# Copy template files into ~/jupyter if they don't already exist
 shopt -s nullglob
 for src in jupyter/*; do
     dst=~/jupyter/$(basename "$src")
@@ -8,9 +10,8 @@ for src in jupyter/*; do
         cp -a "$src" "$dst"
     fi
 done
-shopt -u nullglob
 
-# There is no way to list versions so you can use them programmatically
+# There is no way to list versions so we have to break the abstraction
 for venv in ~/.pyenv/versions/*; do
     (
         pyenv global "$(basename "$venv")"
@@ -20,4 +21,11 @@ for venv in ~/.pyenv/versions/*; do
             pip install -U 'git+git://github.com/radiasoft/rssynergia.git@master'
         fi
     ) || true
+done
+
+git clone https://github.com/radiasoft/rsbeams
+for src in rsbeams/rsbeams/matplotlib/stylelib/*; do
+    dst=~/.config/matplotlib/$(basename "$src")
+    # Always overwrite, b/c
+    cp -a "$src" "$dst"
 done
