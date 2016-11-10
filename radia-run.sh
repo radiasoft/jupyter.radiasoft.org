@@ -20,9 +20,9 @@ _pip_upgrade() {
 }
 
 # There is no way to list versions so we have to break the abstraction
-for venv in ~/.pyenv/versions/*; do
+for venv in ~/.pyenv/versions/*/envs/*; do
     (
-        export PYENV_VERSION="$(basename "$venv")"
+        pyenv activate "$(basename "$venv")"
         _pip_upgrade 'git+git://github.com/radiasoft/rsbeams.git@master'
         if python -c 'import synergia' >& /dev/null; then
             _pip_upgrade 'git+git://github.com/radiasoft/rssynergia.git@master'
