@@ -11,6 +11,31 @@ for src in jupyter/*; do
     fi
 done
 
+_pip_upgrade() {
+    local pkg=$1
+    pip install --upgrade --no-deps "$pkg"
+    # Brings in dependencies if needed
+    pip install "$pkg"
+}
+
+# There is no way to list versions so we have to break the abstraction
+for venv in ~/.pyenv/versions/*/envs/*; do
+    (
+        pyenv activate "$(basename "$venv")"
+        _pip_upgrade 'git+git://github.com/radiasoft/rsbeams.git@master'
+        if python -c 'import synergia' >& /dev/null; then
+            _pip_upgrade 'git+git://github.com/radiasoft/rssynergia.git@master'
+        fi
+    ) || true
+done
+
+git clone https://github.com/radiasoft/rsbeams
+for src in rsbeams/rsbeams/matplotlib/stylelib/*; do
+    dst=~/.config/matplotlib/$(basename "$src")
+    # Always overwrite, b/c
+    cp -a "$src" "$dst"
+done
+
 # Workaround $PYENV_VERSION being set in
 # radiasoft/containers/radiasoft/beamsim-jupyter/radia-run.sh
 #TODO(robnagler) Need to find a cleaner fix, which will start
