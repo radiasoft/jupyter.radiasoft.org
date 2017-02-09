@@ -26,6 +26,7 @@ for venv_path in ~/.pyenv/versions/*/envs/*; do
             venv=$(basename "$venv_path")
             pyenv activate "$venv"
             _pip_upgrade 'git+git://github.com/radiasoft/rsbeams.git@master'
+            _pip_upgrade 'git+git://github.com/radiasoft/rswarp.git@master'
             if python -c 'import synergia' >& /dev/null; then
                 _pip_upgrade 'git+git://github.com/radiasoft/rssynergia.git@master'
             fi
