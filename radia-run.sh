@@ -21,12 +21,14 @@ _pip_upgrade() {
 # There is no way to list versions so we have to break the abstraction
 for venv_path in ~/.pyenv/versions/*/envs/*; do
     (
-        if echo $venv_path | grep -q 'pyenv/versions/2.7'; then 
+        if echo $venv_path | grep -q 'pyenv/versions/2.7'; then
             # Only Python 2.7 has the codes
             venv=$(basename "$venv_path")
             pyenv activate "$venv"
             _pip_upgrade 'git+git://github.com/radiasoft/rsbeams.git@master'
-            _pip_upgrade 'git+git://github.com/radiasoft/rswarp.git@master'
+            if python -c 'import warp' >& /dev/null; then
+                _pip_upgrade 'git+git://github.com/radiasoft/rswarp.git@master'
+            fi
             if python -c 'import synergia' >& /dev/null; then
                 _pip_upgrade 'git+git://github.com/radiasoft/rssynergia.git@master'
             fi
