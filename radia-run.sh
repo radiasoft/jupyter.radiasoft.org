@@ -17,9 +17,10 @@ done
 # terminado without $PYENV_VERSION.
 if ! grep -s -q RS_TERMINADO_INIT ~/.post_bivio_bashrc; then
     cat >> ~/.post_bivio_bashrc <<'EOF'
-if [[ $JPY_USER && $PYENV_VERSION && ! $RS_TERMINADO_INIT ]]; then
+if [[ $JPY_USER && $PYENV_VERSION && -z $RS_TERMINADO_INIT ]]; then
     export RS_TERMINADO_INIT=1
-    unset PYENV_VERSION PYENV_VIRTUAL_ENV
+    pyenv deactivate >&/dev/null || true
+    unset PYENV_VERSION PYENV_VIRTUAL_ENV VIRTUAL_ENV
 fi
 EOF
 fi
