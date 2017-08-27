@@ -29,7 +29,7 @@ if [[ $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
     git config --global user.name "$JPY_USER"
     git config --global user.email "$JPY_USER@users.noreply.github.com"
     git config --global credential.helper 'cache --timeout=3600'
-    rm -f ~/.netrc
+    cat /dev/null > ~/.netrc
 fi
 
 #TODO(robnagler) remove after beamsim installed from 8/29/17 or later
