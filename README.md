@@ -1,4 +1,9 @@
-# Preferences for jupyter.radiasoft.org
+# Radiasoft Public JupyterHub
+
+__[Watch this repository](https://help.github.com/en/articles/watching-and-unwatching-repositories)
+for changes to the public RadiaSoft Jupyter server.__
+
+# Preferences
 
 This repo provides customizations for end-user containers started on
 jupyter.radiasoft.org. This repo's `radia-run.sh` is executed first
