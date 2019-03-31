@@ -20,6 +20,9 @@ clicking on
 [Start My Server](https://jupyter.radiasoft.org/hub/spawn). Refreshing
 your browser page will not allow you to retry.
 
+You can also [submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.org/issues/new)
+so that we know you are waiting for a free server.
+
 # Preferences
 
 This repo provides customizations for end-user containers started on
