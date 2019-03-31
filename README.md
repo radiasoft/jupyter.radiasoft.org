@@ -16,7 +16,7 @@ You may get this error if our cluster has too many active users:
 > You can try restarting your server from the [home page](https://jupyter.radiasoft.org/hub/home).
 
 You can only retry by clicking on
-[the home page](https://jupyter.radiasoft.org/hub/home link) and then
+[the home page link](https://jupyter.radiasoft.org/hub/home) and then
 clicking on
 [Start My Server](https://jupyter.radiasoft.org/hub/spawn). Refreshing
 your browser page will not allow you to retry.
