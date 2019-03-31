@@ -7,10 +7,18 @@ for changes to the public RadiaSoft Jupyter server.__
 
 ## Error 429: Too Many Requests
 
-If you see the error `Too Many Requests`, it means our cluster has too
-many active users. You will need to wait. You can always
-[submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.org/issues/new)
-so that we know who is waiting for resources.scripts should live in rswarp.pkcli
+You may get this error if our cluster has too many active users:
+
+    429 : Too Many Requests
+    Failed to start your server on the last attempt. Please contact admin if the issue persists.
+    You can try restarting your server from the [home page](https://jupyter.radiasoft.org/hub/home).
+
+
+You can only retry by clicking on
+[the home page](https://jupyter.radiasoft.org/hub/home link) and then
+clicking on
+[Start My Server](https://jupyter.radiasoft.org/hub/spawn). Refreshing
+your browser page will not allow you to retry.
 
 # Preferences
 
