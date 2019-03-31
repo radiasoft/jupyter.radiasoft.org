@@ -3,6 +3,15 @@
 __[Watch this repository](https://help.github.com/en/articles/watching-and-unwatching-repositories)
 for changes to the public RadiaSoft Jupyter server.__
 
+# FAQ
+
+## Too Many Requests (429)
+
+If you see the error `Too Many Requests`, it means our cluster has too
+many active users. You will need to wait. You can always
+[submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.org/issues/new)
+so that we know who is waiting for resources.
+
 # Preferences
 
 This repo provides customizations for end-user containers started on
