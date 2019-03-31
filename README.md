@@ -10,7 +10,9 @@ for changes to the public RadiaSoft Jupyter server.__
 You may get this error if our cluster has too many active users:
 
 > 429 : Too Many Requests
+>
 > Failed to start your server on the last attempt. Please contact admin if the issue persists.
+>
 > You can try restarting your server from the [home page](https://jupyter.radiasoft.org/hub/home).
 
 You can only retry by clicking on
