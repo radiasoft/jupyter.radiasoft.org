@@ -10,7 +10,7 @@ for changes to the public RadiaSoft Jupyter server.__
 If you see the error `Too Many Requests`, it means our cluster has too
 many active users. You will need to wait. You can always
 [submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.org/issues/new)
-so that we know who is waiting for resources.scripts should live in rswarp.pkcli
+so that we know who is waiting for resources.
 
 # Preferences
 
