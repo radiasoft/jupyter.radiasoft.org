@@ -19,9 +19,8 @@ if [[ $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
     cat /dev/null > ~/.netrc
 fi
 
-u='bivio_path_insert ~/jupyter/bin'
-if ! grep "$u" ~/.post_bivio_bashrc >& /dev/null; then
-    echo "$u" >> ~/.post_bivio_bashrc
+if ! grep 'bivio_path_insert.*jupyter/bin' ~/.post_bivio_bashrc >& /dev/null; then
+    echo 'bivio_path_insert ~/jupyter/bin' >> ~/.post_bivio_bashrc
 fi
 
 # Workaround TERM=xterm https://github.com/radiasoft/jupyter.radiasoft.org/issues/15
