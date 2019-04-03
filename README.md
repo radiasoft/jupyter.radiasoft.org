@@ -24,14 +24,29 @@ your browser page will not allow you to retry.
 You can also [submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.org/issues/new)
 so that we know you are waiting for a free server.
 
-# Preferences
+# Customizations
+
+## bashrc
+
+You can create a file in `~/jupyter/bashrc`, and it will be read each
+time a terminal window starts. This will allow you to customize your
+shell environment. It will also be read when your server starts so if
+you would a change to show up in notebooks, you will need to restart
+your server.
+
+## programs
+
+The directory `~/jupyter/bin` is automatically inserted in you `$PATH`
+so can create programs/scripts and `chmod +x <file>` in order to make
+them executable. You may need to type `hash -r` after you type a new
+commands.
+
+## radia-run.sh
 
 This repo provides customizations for end-user containers started on
 jupyter.radiasoft.org. This repo's `radia-run.sh` is executed first
 then the user's jupyter.radiasoft.org `radia-run.sh`, allowing
 the user to customize the output of this customization.
-
-## radia-run.sh
 
 The file `radia-run.sh` will be executed at every container start
 as follows:
