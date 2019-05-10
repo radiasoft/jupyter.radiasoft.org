@@ -11,8 +11,8 @@ for src in jupyter/*; do
     fi
 done
 
-u=${JUPYTERHUB_USER:-$JPY_USER}
-if [[ $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
+u=${JUPYTERHUB_USER:-${JPY_USER:-}}
+if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
     git config --global user.name "$u"
     git config --global user.email "$u@users.noreply.github.com"
     git config --global credential.helper 'cache --timeout=3600'
