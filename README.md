@@ -31,13 +31,13 @@ so that we know you are waiting for a free server.
 You can create a file in `~/jupyter/bashrc`, and it will be read each
 time a terminal window starts. This will allow you to customize your
 shell environment. It will also be read when your server starts so if
-you would a change to show up in notebooks, you will need to restart
+you would like a change to show up in notebooks, you will need to restart
 your server.
 
 ## programs
 
-The directory `~/jupyter/bin` is automatically inserted in you `$PATH`
-so can create programs/scripts and `chmod +x <file>` in order to make
+The directory `~/jupyter/bin` is automatically inserted in your `$PATH`
+so you can create programs/scripts and `chmod +x <file>` in order to make
 them executable. You may need to type `hash -r` after you type a new
 commands.
 
