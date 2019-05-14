@@ -92,32 +92,26 @@ from warp import *
 
 ### European XFEL: the WaveProperGator (WPG) notebooks for running SRW
 
-1) Point your browser to the following address:
-
-https://jupyter.radiasoft.org
+1) Point your browser to the [RadiaSoft JupyterHub server](https://jupyter.radiasoft.org)
 
 2) Login with your GitHub credentials.
 
-3) Click green button, "My Server"
+3) Click the "Terminal" button in the "Launcher" tab.
 
-4) Near the upper right, click "New" and then select "Terminal"
-
-5) In the new terminal window, type the following command:
+4) In the new terminal window, type the following command:
 
 ```bash
 jupyter$ git clone https://github.com/samoylv/WPG.git ./WPG
 ```
 
-6) Return to browser tab where you originally logged in to the server.
+5) Browse to a notebook, by doing (for example) the following:
 
-Or alternatively, click the 'Jupyter' logo near the upper left.
+Double click "WPG"
 
-7) Browse to a notebook, by doing (for example) the following:
+Double click "samples"
 
-Click "WPG"
+Double click "Tutorials"
 
-Click "samples"
+Double click "Tutorial_case_1.ipynb"
 
-Click "Tutorials"
-
-Click "Tutorial_case_1.ipynb"
+6) In the "Select Kernel" popup window, you can keep the default choice of "Python 2" by clicking the "SELECT" button.
