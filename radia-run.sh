@@ -18,9 +18,3 @@ if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]
     git config --global credential.helper 'cache --timeout=3600'
     cat /dev/null > ~/.netrc
 fi
-
-#TODO(robnagler) remove after next release 6/12/19
-u=/home/vagrant/.pyenv/versions/py2/bin/pyzgoubi
-if grep /usr/bin/python "$u" >&/dev/null; then
-    perl -pi -e "s{(?<=^#\!).*}{/home/vagrant/.pyenv/versions/py2/bin/python}" "$u"
-fi
