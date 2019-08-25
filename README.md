@@ -5,15 +5,14 @@ for changes to the public RadiaSoft Jupyter server.__
 
 # FAQ
 
-## Error 429: Too Many Requests
+## Spawn Failed: There are no more servers available.
 
 You may get this error if our cluster has too many active users:
 
-> 429 : Too Many Requests
+>  Spawn failed
 >
-> Failed to start your server on the last attempt. Please contact admin if the issue persists.
->
-> You can try restarting your server from the [home page](https://jupyter.radiasoft.org/hub/home).
+> The latest attempt to start your server has failed. There are no more servers available. Please wait a few minutes before trying again. Would you like to retry starting it? 
+
 
 You can only retry by clicking on
 [the home page link](https://jupyter.radiasoft.org/hub/home) and then
