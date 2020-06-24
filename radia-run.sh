@@ -11,6 +11,11 @@ for src in jupyter/*; do
     fi
 done
 # if alpha or beta: ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.[56]
+if [[ ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.5 ]]; then
+    if [[ ${PS1:-} ]]; then
+        export TERM=xterm
+    fi
+fi
 (
     set -e
     install_source_bashrc
