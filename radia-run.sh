@@ -11,15 +11,6 @@ for src in jupyter/*; do
     fi
 done
 # if alpha or beta: ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.[56]
-if grep -s -q TERM=ansi ~/.post_bivio_bashrc \
-    && ! grep -s -q TERM=xterm-256color ~/.post_bivio_bashrc; then
-    cat >> ~/.post_bivio_bashrc <<'EOF'
-# undo TERM=ansi from radiasoft/jupyter.radiasoft.org/radia-run.sh
-if [[ ${PS1:-} ]]; then
-    export TERM=xterm-256color
-fi
-EOF
-fi
 (
     set -e
     install_source_bashrc
