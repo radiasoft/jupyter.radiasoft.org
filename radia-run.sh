@@ -18,6 +18,7 @@ done
     cd rsopt
     install_not_strict_cmd pyenv shell py3
     pip install .
+    install -m 755 rsopt/libe_tools/libensemble-rsmpi.py ~/jupyter/bin/libensemble-rsmpi
 ) >& ~/.tmp-jupyter.radiasoft.org.err
 u=${JUPYTERHUB_USER:-${JPY_USER:-}}
 if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
