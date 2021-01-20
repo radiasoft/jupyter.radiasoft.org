@@ -1,10 +1,5 @@
 # Radiasoft Public JupyterHub
 
-[Jupyter to be integrated into Sirepo](https://github.com/radiasoft/jupyter.radiasoft.org/issues/122) on 12/21/2020 at 10:00 MST
-
-__[Watch this repository](https://help.github.com/en/articles/watching-and-unwatching-repositories)
-for changes to the public RadiaSoft Jupyter server.__
-
 # FAQ
 
 ## Spawn Failed: There are no more servers available.
