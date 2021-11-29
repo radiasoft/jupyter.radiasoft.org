@@ -8,7 +8,7 @@ You may get this error if our cluster has too many active users:
 
 >  Spawn failed
 >
-> The latest attempt to start your server has failed. There are no more servers available. Please wait a few minutes before trying again. Would you like to retry starting it? 
+> The latest attempt to start your server has failed. There are no more servers available. Please wait a few minutes before trying again. Would you like to retry starting it?
 
 
 You can only retry by clicking on
@@ -21,6 +21,13 @@ You can also [submit an Issue](https://github.com/radiasoft/jupyter.radiasoft.or
 so that we know you are waiting for a free server.
 
 # Customizations
+
+## pre_jupyter_bashrc
+
+The file in `~/jupyter/pre_jupyter_bashrc`, and it will be run once at
+container start. This will allow you to customize your server
+environment such as running `pip install`. `~/.bashrc` will run before
+this runs so `pyenv` is setup.
 
 ## bashrc
 
