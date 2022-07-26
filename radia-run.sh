@@ -11,15 +11,6 @@ for src in jupyter/*; do
     fi
 done
 # if alpha or beta: ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.[56]
-(
-    set -e
-    install_source_bashrc
-    gcl radiasoft/rsopt
-    cd rsopt
-    install_not_strict_cmd pyenv shell py3
-    pip install .
-    install -m 755 rsopt/libe_tools/libensemble-rsmpi.py ~/jupyter/bin/libensemble-rsmpi
-) >& ~/.tmp-jupyter.radiasoft.org.err
 u=${JUPYTERHUB_USER:-${JPY_USER:-}}
 if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
     git config --global user.name "$u"
