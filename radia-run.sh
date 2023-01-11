@@ -3,6 +3,7 @@
 # Setup jupyter container
 #
 # Copy template files into ~/jupyter if they don't already exist
+echo 'START https://github.com/radiasoft/jupyter.radiasoft.org/radia-run.sh'
 shopt -s nullglob
 for src in jupyter/*; do
     dst=~/jupyter/$(basename "$src")
@@ -29,3 +30,4 @@ if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]
     git config --global credential.helper 'cache --timeout=3600'
     cat /dev/null > ~/.netrc
 fi
+echo 'END https://github.com/radiasoft/jupyter.radiasoft.org/radia-run.sh'
