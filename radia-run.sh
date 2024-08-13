@@ -11,17 +11,6 @@ for src in jupyter/*; do
         cp -a "$src" "$dst"
     fi
 done
-if ! type -p rsopt; then
-    (
-        set -e
-        install_source_bashrc
-        gcl radiasoft/rsopt
-        cd rsopt
-        install_not_strict_cmd pyenv shell py3
-        pip install .
-        install -m 755 rsopt/libe_tools/libensemble-rsmpi.py ~/jupyter/bin/libensemble-rsmpi
-    ) >& ~/.tmp-jupyter.radiasoft.org.err
-fi
 # if alpha or beta: ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.[56]
 u=${JUPYTERHUB_USER:-${JPY_USER:-}}
 if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
