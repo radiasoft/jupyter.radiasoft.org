@@ -57,7 +57,7 @@ _link() {
 _link_one() {
     declare src=$1
     declare tgt=$2
-    if [[ $(readlink "$src") != $tgt ]]; then
+    if [[ $(readlink "$tgt") != $src ]]; then
         rm -f "$tgt"
         ln -s "$src" "$tgt"
     fi
