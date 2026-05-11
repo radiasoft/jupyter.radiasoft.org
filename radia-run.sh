@@ -15,6 +15,7 @@ mkdir -p ~/jupyter/bin
 for src in bin/*.sh; do
     install -m 550 "$src" ~/jupyter/bin/"$(basename "$src" .sh)"
 done
+export HDF5_DO_MPI_FILE_SYNC=FALSE
 # if alpha or beta: ${JUPYTERHUB_ACTIVITY_URL:-} =~ 10.1.2.[56]
 u=${JUPYTERHUB_USER:-${JPY_USER:-}}
 if [[ $u && $(git config --get --global user.name 2>/dev/null) = '<git-user>' ]]; then
